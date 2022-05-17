@@ -1,0 +1,72 @@
+$tablet-breakpoint: 48rem;
+$desktop-breakpoint: 80rem;
+
+@use './colors';
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin input {
+  font: inherit;
+  font-weight: 400;
+  min-width: 15rem;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: colors.$tradeStats-black;
+  background-color: colors.$alabaster;
+
+  border: {
+    radius: 4px;
+    width: 1px;
+    style: solid;
+    color: colors.$mercury;
+  }
+
+  &:active,
+  &:focus {
+    border: {
+      width: 2px;
+      color: colors.$tradeStats-blue;
+    }
+  }
+}
+
+@mixin icon-left($iconUrl) {
+  padding-left: 2.25rem;
+  background: {
+    image: url($iconUrl);
+    repeat: no-repeat;
+    position: left 0.75rem center;
+  }
+}
+
+@mixin icon-right($iconUrl) {
+  padding-right: 2.25rem;
+  background: {
+    image: url($iconUrl);
+    repeat: no-repeat;
+    position: right 0.75rem center;
+  }
+}
+
+@mixin avatar($avatarUrl: '') {
+  height: 2.5rem;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  border-radius: 50%;
+  background: {
+    image: url($avatarUrl);
+    position: center;
+    size: cover;
+    color: colors.$mercury;
+  }
+}
