@@ -1,9 +1,15 @@
 import './App.scss';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Gorgeous ;-)</h1>
+      <BrowserRouter>
+        <h1>Hello Gorgeous ;-)</h1>
+        <Switch>
+          <Route path={'/'} exact component={LandingPage} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
