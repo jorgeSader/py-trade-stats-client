@@ -1,7 +1,7 @@
 $tablet-breakpoint: 48rem;
 $desktop-breakpoint: 80rem;
 
-@use './colors';
+@use './colors' as *;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -21,21 +21,21 @@ $desktop-breakpoint: 80rem;
   min-width: 15rem;
   padding: 0.75rem;
   font-size: 0.75rem;
-  color: colors.$tradeStats-black;
-  background-color: colors.$alabaster;
+  color: $ts-black;
+  background-color: $ts-alabaster;
 
   border: {
     radius: 4px;
     width: 1px;
     style: solid;
-    color: colors.$mercury;
+    color: $ts-mercury;
   }
 
   &:active,
   &:focus {
     border: {
       width: 2px;
-      color: colors.$tradeStats-blue;
+      color: $ts-accent;
     }
   }
 }
