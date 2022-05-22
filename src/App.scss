@@ -1,3 +1,5 @@
+@use './styles/partials/colors' as *;
+
 *,
 *::before,
 *::after {
@@ -15,10 +17,10 @@ body {
 
 button {
   font: inherit;
-  background: #ff2058;
+  background: $ts-accent;
   padding: 0.5rem 2rem;
-  color: white;
-  border: 1px solid #ff2058;
+  color: $ts-white;
+  border: 1px solid $ts-accent;
   margin: 0.5rem 0;
   border-radius: 5px;
   cursor: pointer;
