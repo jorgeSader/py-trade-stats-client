@@ -1,5 +1,8 @@
-import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import LandingPage from './pages/LandingPage/LandingPage';
+
+import './App.scss';
 
 function App() {
   return (
